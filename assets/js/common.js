@@ -6,4 +6,5 @@ $(document).ready(function() {
         $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
     });
     $('.navbar-nav').find('a').removeClass('waves-effect waves-light');
+    $('button.btn').removeClass('waves-effect waves-light');
 });

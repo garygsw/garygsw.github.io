@@ -1,72 +1,225 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation,}
+@mastersthesis{Goh21Analyzing,
+  author   = {Gary S. W. Goh},
+  title    = {Analyzing Deep Learning Models for Traffic Prediction},
+  school   = {Singapore University of Technology and Design},
+  abstract = {Traffic prediction problems concern the mobility of human crowds in urban city landscapes. The study of these problems is crucial to improve the efficiency of traffic flows in urban networks and people’s quality of life. Deep learning, in recent years, has achieved impeccable results and outperformed traditional statistical methods for solving traffic-related problems in the literature. However, deep learning suffers from poor interpretability. The aim of this dissertation is to investigate deep learning models applied in the traffic domain, and interpret the behaviors of the models by analyzing salient global feature importance and specific input-to-output relationship. First, a literature review of traffic prediction problems and deep learning models is included, followed by a review of analyzer methods for interpreting deep learning models. Second, we explore the usage of Twitter’s tweets as a new source of additional information in the new digital age to improve the performance of a crowd flow prediction model ST-ResNet on the city-wide crowd flow prediction task, as well as to provide additional context to the prediction in the form of human natural language. Third, we take inspirations from deep learning attribution methods such as Integrated Gradients and SmoothGrad, and proposed a novel improved method, SmoothTaylor, which is derived from the Taylor’s theorem. Finally, we discuss future work as we share some preliminary applied results of the above attribution methods on the traffic status prediction for graph-based traffic status prediction model.},
+  address  = {Singapore},
+  year     = {2021},
+  month    = {7},
+  abbr     = {MEng},
+  pdf      = {GaryGoh_MEngThesis.pdf}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics,},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers,}
+@inproceedings{GohLWSB21Understanding,
+  author    = {Gary S. W. Goh and
+               Sebastian Lapuschkin and
+               Leander Weber and
+               Wojciech Samek and
+               Alexander Binder},
+  title     = {Understanding Integrated Gradients with SmoothTaylor for Deep Neural Network Attribution},
+  booktitle = {2020 25th International Conference on Pattern Recognition, (ICPR)},
+  abstract  = {Integrated Gradients as an attribution method for deep neural network models offers simple implementability. However, it suffers from noisiness of explanations which affects the ease of interpretability. The SmoothGrad technique is proposed to solve the noisiness issue and smoothen the attribution maps of any gradient-based attribution method. In this paper, we present SmoothTaylor as a novel theoretical concept bridging Integrated Gradients and SmoothGrad, from the Taylor's theorem perspective. We apply the methods to the image classification problem, using the ILSVRC2012 ImageNet object recognition dataset, and a couple of pretrained image models to generate attribution maps. These attribution maps are empirically evaluated using quantitative measures for sensitivity and noise level. We further propose adaptive noising to optimize for the noise scale hyperparameter value. From our experiments, we find that the SmoothTaylor approach together with adaptive noising is able to generate better quality saliency maps with lesser noise and higher sensitivity to the relevant points in the input space as compared to Integrated Gradients.},
+  pages     = {4949--4956},
+  publisher = {IEEE},
+  year      = {2021},
+  month     = {1},
+  date      = {10-15},
+  address   = {Virtual Event / Milan, Italy},
+  html      = {https://doi.org/10.1109/ICPR48806.2021.9413242},
+  doi       = {10.1109/ICPR48806.2021.9413242},
+  arxiv     = {2004.10484},
+  abbr      = {ICPR},
+  code      = {https://github.com/garygsw/smooth-taylor},
+  poster    = {icpr2020/ICPR2020_SmoothTaylor_Poster.pdf},
+  slides    = {icpr2020/ICPR2020_SmoothTaylor_Slides.pdf},
+  pdf       = {icpr2020/ICPR2020_SmoothTaylor_Paper.pdf},
+  selected  = {true}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.,},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  selected={true}
+@inproceedings{GohKZ18Twitter,
+  author    = {Gary S. W. Goh and
+               Jing Yu Koh and
+               Yue Zhang},
+  editor    = {Hanghang Tong and
+               Zhenhui Jessie Li and
+               Feida Zhu and
+               Jeffrey Yu},
+  title     = {Twitter-Informed Crowd Flow Prediction},
+  booktitle = {2018 IEEE International Conference on Data Mining Workshops, (ICDM)},
+  abstract  = {We explore the usage of real-time tweets to explain for non-recurring large-scale spatio-temporal crowd movement. The aim is to evaluate the usefulness of tweets to improve the performance of city-wide crowd flow prediction. We conduct experiments in the context of Singapore city to investigate our proposition by extending upon an existing crowd flow prediction model. Implemented using a deep-neural-network-based approach, an end-to-end predictive model is configured to take in tweets as additional inputs to forecast the future flow of crowds in an urban environment. We extract various features from tweets, such as tweet counts, tweet tenses and sentiments as additional signals to the predictive model. From the experimental results, we show that some models are able to improve the prediction accuracy, and share our insights on how tweets are related to crowd flows.},
+  pages     = {624--631},
+  publisher = {IEEE},
+  year      = {2018},
+  month     = {11},
+  date      = {17-20},
+  address   = {Singapore},
+  html      = {https://doi.org/10.1109/ICDMW.2018.00097},
+  doi       = {10.1109/ICDMW.2018.00097},
+  abbr      = {ICDM},
+  code      = {https://github.com/garygsw/twitter-crowd-flow-prediction},
+  slides    = {icdm2018/ICDMW2018_TCFP_Slides.pdf},
+  pdf       = {icdm2018/ICDMW2018_TCFP_Paper.pdf},
+  selected  = {true}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik,},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@inproceedings{OngGX15Sparsity,
+  author    = {B. Y. Ong and
+               Gary S. W. Goh and
+               Chi Xu},
+  title     = {Sparsity Adjusted Information Gain for Feature Selection in Sentiment Analysis},
+  booktitle = {2015 IEEE International Conference on Big Data},
+  abstract  = {The widespread use of social media and the internet are emerging trends that offer an additional interaction channel for companies to better understand customer sentiments about their brands and products. Sentiment analysis uses text data from social media such as customer comments and reviews, which has the nature of high dimensionality. Without selection, typically there are at least thousands of features (words or phrases) that can be extracted from a text corpus, among which there are many redundant or irrelevant features for sentiment classification task. Thus, it is critical to select a compact yet effective set of features to avoid the complex classifier design and slow running time of classification process. However, very few of existing metrics is able to improve efficacy of feature selection by addressing the issue of sparsity of feature matrix for text data, i.e., many features may appear only in a few documents. In this paper, an improved feature selection metric known as sparsity adjusted information gain (SAIG) is proposed, which modifies the conventional information gain metric and aims to adjust the feature ranking scores according to the sparsity of the feature vector. It is able to use less features to obtain a targeted performance level. The experiment results show that SAIG is able to improve the performance of sentiment classification.},
+  pages     = {2122--2128},
+  publisher = {IEEE Computer Society},
+  year      = {2015},
+  month     = {10},
+  date      = {29},
+  address   = {Santa Clara, CA, USA},
+  html      = {https://doi.org/10.1109/BigData.2015.7363995},
+  doi       = {10.1109/BigData.2015.7363995},
+  abbr      = {IEEE BigData},
+  pdf       = {ieeebigdata2015/IEEEBigData_SAIG_Paper.pdf}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.,},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@inproceedings{YangGJZA15Forecast,
+  author    = {Dazhi Yang and
+               Gary S. W. Goh and
+               Siwei Jiang and
+               Allan N. Zhang and
+               Orkan Akcan},
+  title     = {Forecast UPC-level FMCG demand, Part II: Hierarchical Reconciliation},
+  booktitle = {2015 IEEE International Conference on Big Data},
+  abstract  = {In a big data enabled environment, manufacturers and distributors may have access to previously unobserved retailer-level demand related information. This additional information can be considered in demand forecasting to produce more accurate forecasts, and thus enable better stock-outs management. In Part II of this two-part paper, we explore the hierarchical nature of fast moving consumer goods (FMCG) demand (represented by sales) time series and produce one week ahead rolling forecasts on universal product code (UPC) level (or distributor level, as per our definition below). We show that the hierarchical forecasting framework has significant accuracy improvement over the conventional univariate forecasting methods. The main reason of the observed improvements is due to the price and promotion information available at the retailer level, which is assumed to be unknown to the distributor. To reconcile forecasts according to the hierarchy, only the forecast values at retailer level are needed, the business strategies of individual retailers remain proprietary. A freely available dataset is considered to encourage further exploration. Data exploratory analysis and visualization tools are discussed in Part I of the paper.},
+  pages     = {2113--2121},
+  publisher = {IEEE Computer Society},
+  year      = {2015},
+  month     = {10},
+  date      = {29},
+  address   = {Santa Clara, CA, USA},
+  html      = {https://doi.org/10.1109/BigData.2015.7363994},
+  doi       = {10.1109/BigData.2015.7363994},
+  abbr      = {IEEE BigData},
+  pdf       = {ieeebigdata2015/IEEEBigData_ForecastFMCG-II_Paper.pdf}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@inproceedings{YangGXZA15Forecast,
+  author    = {Dazhi Yang and
+               Gary S. W. Goh and
+               Chi Xu and
+               Allan N. Zhang and
+               Orkan Akcan},
+  title     = {Forecast UPC-level FMCG demand, Part I: Exploratory analysis and visualization},
+  booktitle = {2015 IEEE International Conference on Big Data},
+  abstract  = {We are interested in forecasting a large collection of FMCG demand time series. As the demand of FMCG exists in a hierarchy (from manufacturers to distributors to retailers), the bottom level of the hierarchy may contain thousands or even millions of time series. Producing aggregate consistent forecasts while utilizing the unique features from each time series thus become a technical challenge. To achieve better forecasting results, exploratory analysis is often necessary to obtain insights on the underlying demand generating mechanism for each time series. Exploratory analysis aims at discovering those so-called "exogenous factors", such as price, demand of the complementary/substitutive goods and calendar events, which can help explain some of the demand fluctuation. During forecast accuracy evaluation, outlier detection is also important; a single anomalous time series can contribute much to the overall error. However, in a big data (such as retailing scanner data) enabled environment, exploratory analysis and visualization need much attention, because of the non-scalable nature of the existing methods. Scalability is essential for exogenous factor selection and outlier detection in big time series data. In Part I of this two-part paper, we introduce some exploratory analytics and visualization methods (from not scalable to very scalable) for big retailing time series. Forecasting of the hierarchical FMCG demand is addressed in Part II.},
+  pages     = {2106--2112},
+  publisher = {IEEE Computer Society},
+  year      = {2015},
+  month     = {10},
+  date      = {29},
+  address   = {Santa Clara, CA, USA},
+  url       = {https://doi.org/10.1109/BigData.2015.7363993},
+  doi       = {10.1109/BigData.2015.7363993},
+  abbr      = {IEEE BigData},
+  pdf       = {ieeebigdata2015/IEEEBigData_ForecastFMCG-I_Paper.pdf}
+}
+
+@inproceedings{YangGJZ16Spatial,
+  author    = {Dazhi Yang and
+               Gary S. W. Goh and
+               Siwei Jiang and
+               Allan N. Zhang},
+  editor    = {James Joshi and
+               George Karypis and
+               Ling Liu and
+               Xiaohua Hu and
+               Ronay Ak and
+               Yinglong Xia and
+               Weijia Xu and
+               Aki{-}Hiro Sato and
+               Sudarsan Rachuri and
+               Lyle H. Ungar and
+               Philip S. Yu and
+               Rama Govindaraju and
+               Toyotaro Suzumura},
+  title     = {Spatial data dimension reduction using quadtree: A case study on satellite-derived solar radiation},
+  booktitle = {2016 IEEE International Conference on Big Data},
+  abstract  = {Satellite data is discrete in both space and time; it can be considered as temporal snapshots (time series) of lattice processes. As the raw datasets are often too large to host publicly, processed datasets with a coarse spatial resolution are often hosted as an alternative. Nevertheless, with a regular grid, the inhomogeneous variability in the lattice processes cannot be captured effectively. In this paper, a quadtree-based spatial data dimension reduction algorithm is demonstrated. Based on the stratum variance, this algorithm iteratively divides lattice data into strata of fours. In this way, the number of strata in an area can be correlated to the variability of that area. A satellite-derived surface solar radiation (SSR) dataset is used for the case study. Using parallel computing, the quadtree algorithm is applied on each temporal snapshot of SSR in the dataset. The processed data is then saved in a list structure. Finally, a solar resource assessment application, namely, optimizing the orientation of a photovoltaic array, is considered to demonstrate the effectiveness and efficiency of the dimension-reduced dataset.},
+  pages     = {3807--3812},
+  publisher = {IEEE Computer Society},
+  year      = {2016},
+  month     = {12},
+  date      = {5-8},
+  address   = {Washington DC, USA},
+  html      = {https://doi.org/10.1109/BigData.2016.7841052},
+  doi       = {10.1109/BigData.2016.7841052},
+  abbr      = {IEEE BigData},
+  pdf       = {ieeebigdata2015/IEEEBigData_SpatialQuadTree_Paper.pdf}
+}
+
+@inproceedings{YangGJZ16aForecast,
+  author    = {Dazhi Yang and
+               Gary S. W. Goh and
+               Siwei Jiang and
+               Allan N. Zhang},
+  editor    = {James Joshi and
+               George Karypis and
+               Ling Liu and
+               Xiaohua Hu and
+               Ronay Ak and
+               Yinglong Xia and
+               Weijia Xu and
+               Aki{-}Hiro Sato and
+               Sudarsan Rachuri and
+               Lyle H. Ungar and
+               Philip S. Yu and
+               Rama Govindaraju and
+               Toyotaro Suzumura},
+  title     = {Forecast UPC-level FMCG demand, Part III: Grouped Reconciliation},
+  booktitle = {2016 IEEE International Conference on Big Data},
+  abstract  = {Coordination across a supply chain creates win-win situation for all players in that supply chain; we address the benefits, in terms of forecast accuracy, of reconciling demand forecasts across a supply chain. In Part III of this three-part paper, we continue our discussion on optimal reconciliation of forecasts. Two contributions are made in this paper: 1) the grouped reconciliation technique is used to address the forecast inconsistency in situations when more than one hierarchy can be defined in a supply chain, and 2) minimum trace (MinT) estimator is used to further improve the reconciliation accuracy on top of the weighted least square (WLS) approach, which was used in the earlier parts of this three-part paper. Following the earlier works, the same set of fast moving consumer goods data is used here. The current results are compared to the previous ones. It is shown that the MinT reconciliation technique outperforms the WLS approach, which has been previously identified as the best reconciliation technique for the data from the bottled juice category in the Dominick's Finer Food dataset.},
+  pages     = {3813--3819},
+  publisher = {IEEE Computer Society},
+  year      = {2016},
+  month     = {12},
+  date      = {5-8},
+  address   = {Washington DC, USA},
+  html      = {https://doi.org/10.1109/BigData.2016.7841053},
+  doi       = {10.1109/BigData.2016.7841053},
+  abbr      = {IEEE BigData},
+  pdf       = {ieeebigdata2015/IEEEBigData_ForecastFMCG-III_Paper.pdf}
+}
+
+@inproceedings{GohAZ16Optimizing,
+  author    = {Gary S. W. Goh and
+               Andy J. L. Ang and
+               Allan N. Zhang},
+  editor    = {James Joshi and
+               George Karypis and
+               Ling Liu and
+               Xiaohua Hu and
+               Ronay Ak and
+               Yinglong Xia and
+               Weijia Xu and
+               Aki{-}Hiro Sato and
+               Sudarsan Rachuri and
+               Lyle H. Ungar and
+               Philip S. Yu and
+               Rama Govindaraju and
+               Toyotaro Suzumura},
+  title     = {Optimizing performance of sentiment analysis through design of experiments},
+  booktitle = {2016 IEEE International Conference on Big Data},
+  abstract  = {Traditional manual design of analytical processes is challenging as it requires a general analyst to have good grasping of numerous algorithms and the interaction effects between each technique and the data across multiple domains. Especially in an increasingly high data variety/multi-domain environment today, this design process can be very laborious/challenging. In this paper, we describe a design optimization approach using design of experiments to determine a suitable design in a standardized text classification process with high classification performance. We focus on sentiment analysis as a use case for this approach, as standard analytical methods in each phase of the sentiment analysis process have been established; from data pre-processing, feature selection and classification. In our proposed approach, we present an automatic and domain-free technique of using design of experiments to this design process, with the sentiment classification evaluation metrics as the performance criteria for optimization. In addition, we show that several interpretable analyses can be made to better understand the complex interaction effects of various analytical techniques with the data, which then can guide a general analyst to select more appropriate process design parameters for better text classification performance.},
+  pages     = {3737--3742},
+  publisher = {IEEE Computer Society},
+  year      = {2016},
+  month     = {12},
+  date      = {5-8},
+  address   = {Washington DC, USA},
+  html      = {https://doi.org/10.1109/BigData.2016.7841042},
+  doi       = {10.1109/BigData.2016.7841042},
+  abbr      = {IEEE BigData},
+  pdf       = {ieeebigdata2015/IEEEBigData_SentimentDOE_Paper.pdf}
 }

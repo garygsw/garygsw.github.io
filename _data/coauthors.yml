@@ -1,18 +1,41 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Lapuschkin":
+    - firstname: ["Sebastian", "S."]
+      url: http://iphome.hhi.de/lapuschkin/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Samek":
+    - firstname: ["Wojciech", "W."]
+      url: http://iphome.hhi.de/samek/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Binder":
+    - firstname: ["Alexander", "A."]
+      url: https://www.visual-intelligence.no/people/alexander-binder
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Koh":
+    - firstname: ["Jing Yu", "J. Y."]
+      url: http://kohjingyu.com
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Yang":
+    - firstname: ["Dazhi", "D."]
+      url: https://scholar.google.com.sg/citations?user=XsAxuZIAAAAJ&hl=en
+
+"Jiang":
+    - firstname: ["Siwei", "S."]
+      url: https://scholar.google.com/citations?user=LKL0C2QAAAAJ&hl=en
+
+"Zhang":
+    - firstname: ["Allan", "Allan N.", "N.", "A. N."]
+      url: https://scholar.google.com.sg/citations?user=49XIik4AAAAJ&hl=en
+    - firstname: ["Yue", "Y."]
+      url: https://frcchang.github.io
+
+"Ong":
+    - firstname: ["Boon Yong", "B. Y."]
+      url: https://scholar.google.com.sg/citations?user=2QW72YkAAAAJ&hl=en
+
+"Akcan":
+    - firstname: ["Orkan", "O."]
+      url: https://www.linkedin.com/in/orkanakcan?originalSubdomain=sg
+
+"Xu":
+    - firstname: ["Chi", "C."]
+      url: https://scholar.google.com.sg/citations?user=gHHIfB4AAAAJ&hl=en
