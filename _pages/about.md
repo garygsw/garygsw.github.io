@@ -6,7 +6,7 @@ description: Graduate Student • <a href="https://istd.sutd.edu.sg">ISTD Pillar
 
 profile:
     align: right
-    image: profile_pic.jpg
+    image: prof_pic.jpg
     address: >
         <p>8 Somapah Rd</p>
         <p>Singapore 487372</p>
