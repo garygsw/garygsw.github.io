@@ -9,9 +9,7 @@ last_name: Goh
 email: garygsw@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
     My personal blog that I use to share and document my thoughts and important things that I have learnt.
-footer_text: >
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-    Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text:
 # Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 icon: # the emoji used as the favicon
 url: https://garygsw.github.io # the base hostname & protocol for your site
@@ -75,8 +73,8 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Learning AI # your blog must have a name for it to show up in the nav bar
-blog_description: by explaning from scratch
+# blog_name: Learning AI # your blog must have a name for it to show up in the nav bar
+blog_description: by explaining from scratch
 permalink: /blog/:title/
 
 # Pagination
@@ -100,6 +98,9 @@ collections:
     projects:
         output: true
         permalink: /projects/:path/
+    puzzles:
+        output: true
+        permalink: /puzzles/:path/
     books:
         output: true
         permalink: /books/:path/
@@ -119,7 +120,9 @@ news_limit: 5
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
-highlight_theme: github # https://github.com/jwarby/jekyll-pygments-themes
+highlight_theme: # https://github.com/jwarby/jekyll-pygments-themes
+    light: autumn
+    dark: monokai
 kramdown:
     input: GFM # github flavored markdown
     syntax_highlighter_opts:
@@ -189,6 +192,9 @@ scholar:
         - slides
         - pdf
         - selected
+        - talk
+        - award
+        - award-link
 
     details_dir: bibliography
     details_layout: bibtex.html

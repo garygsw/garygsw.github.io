@@ -10,6 +10,7 @@ p, h1, h2, h3, h4, h5, h6, em, div, span, strong {
 
 a {
   color: var(--global-theme-color);
+  transition: all 0.3s;
   &:hover {
     color: var(--global-hover-color);
   }
@@ -26,6 +27,10 @@ p.desc a {
   }
 }
 
+table.table-borderless {
+  width: inherit;
+}
+
 table.table a {
   color: var(--global-theme-color);
   &:hover {
@@ -37,19 +42,23 @@ table.table a {
 p:not([class]) a {
   color: var(--global-text-color);
   text-decoration: none;
-  background: -webkit-linear-gradient(transparent 90%, $light-blue-color 10%);
-  background: -moz-linear-gradient(transparent 90%, $light-blue-color  10%);
-  background: linear-gradient(transparent 90%, $light-blue-color  10%);
-  -webkit-box-shadow: inset 0 0 0 0 $light-blue-color;
-  box-shadow: inset 0 0 0 0 $light-blue-color;
+  background: -webkit-linear-gradient(transparent 90%, var(--global-ext-link-color) 10%);
+  background: -moz-linear-gradient(transparent 90%, var(--global-ext-link-color) 10%);
+  background: linear-gradient(transparent 90%, var(--global-ext-link-color) 10%);
+  -webkit-box-shadow: inset 0 0 0 0 var(--global-ext-link-color);
+  box-shadow: inset 0 0 0 0 var(--global-ext-link-color);
   -webkit-transition: box-shadow ease .5s;
   -moz-transition: box-shadow ease .5s;
   transition: box-shadow ease .5s;
   &:hover {
     color: var(--global-bg-color);
-    -webkit-box-shadow: inset 0 -100px 0 0 $light-blue-color;
-    box-shadow: inset 0 -100px 0 0 $light-blue-color;
+    -webkit-box-shadow: inset 0 -100px 0 0 var(--global-ext-link-color);
+    box-shadow: inset 0 -100px 0 0 var(--global-ext-link-color);
   }
+}
+
+.badge {
+  color: var(--global-cv-bg-color) !important;
 }
 
 blockquote {
@@ -262,8 +271,9 @@ footer.fixed-bottom {
   font-size: 0.75rem;
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    text-align: center;
   }
   a {
     color: var(--global-footer-link-color);
@@ -347,6 +357,54 @@ footer.sticky-bottom {
   }
 }
 
+// CV
+
+.cv {
+
+  table td {
+    font-size: 1rem;
+    color: var(--global-text-color);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .table {
+    color: inherit;
+  }
+
+  .card, .list-group-item {
+    background-color: var(--global-cv-bg-color);
+  }
+
+  .card-title {
+    color: var(--global-theme-color);
+    font-weight: bold;
+  }
+
+  .abbr {
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    abbr {
+      display: inline-block;
+      background-color: var(--global-theme-color);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      a {
+        color: white;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .award {
+      color: var(--global-theme-color) !important;
+      border: 1px solid var(--global-theme-color);
+    }
+  }
+}
+
 
 // Projects
 
@@ -414,8 +472,8 @@ footer.sticky-bottom {
     }
   }
   h2.year {
-    color: $grey-color-light;
-    border-top: 1px solid $grey-color-light;
+    color: var(--global-text-color-light);
+    border-top: 1px solid var(--global-text-color-light);
     padding-top: 1rem;
     margin-top: 2rem;
     margin-bottom: -2rem;

@@ -3040,7 +3040,7 @@ d-citation-list .references .title {
 
   function highlightAutomaticallyCallback() {
   	if (!_.manual) {
-  		_.highlightAll();
+  		// _.highlightAll();
   	}
   }
 

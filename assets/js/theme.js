@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
 let toggleTheme = (theme) => {
@@ -18,6 +22,16 @@ let setTheme = (theme) =>  {
     document.documentElement.removeAttribute("data-theme");
   }
   localStorage.setItem("theme", theme);
+
+
+  // Code Syntax Highlighting
+  if (theme == "dark") {
+    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.dark }}.css" />'
+  } else {
+    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.light }}.css" />'
+  }
+  $('#syntax-theme').remove();
+  $('head').append(syntax_link);
   
   // Updates the background of medium-zoom overlay.
   if (typeof medium_zoom !== 'undefined') {

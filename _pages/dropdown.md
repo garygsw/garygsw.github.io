@@ -1,7 +1,7 @@
 ---
 layout: page
-title: submenus
-nav: true
+nav-title: submenus
+nav: false
 dropdown: true
 children:
     - title: books
