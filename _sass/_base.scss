@@ -361,6 +361,10 @@ footer.sticky-bottom {
 
 .cv {
 
+  h6 a{
+    color: var(--global-text-color);
+  }
+
   table td {
     font-size: 1rem;
     color: var(--global-text-color);
@@ -376,6 +380,7 @@ footer.sticky-bottom {
 
   .card, .list-group-item {
     background-color: var(--global-cv-bg-color);
+    font-weight: 300;
   }
 
   .card-title {
@@ -386,6 +391,7 @@ footer.sticky-bottom {
   .abbr {
     height: 2rem;
     margin-bottom: 0.5rem;
+    padding-left: 40px;
     abbr {
       display: inline-block;
       background-color: var(--global-theme-color);
@@ -796,6 +802,13 @@ pre:hover .copy-btn, pre .copy-btn:focus {
 
 .tooltipped-sticky.tooltipped-multiline:after {
   display:table-cell
+}
+
+
+.oops {
+  text-align: center;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 // Transitioning Themes

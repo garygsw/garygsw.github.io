@@ -9,7 +9,7 @@ nav: true
     <h1 class="post-title">{{ page.title }}</h1>
     <!-- Place PDF download link at the top right. -->
     <div class="row" style="margin-top: -3.5em;">
-        <a class="ml-auto mr-2" href="/assets/pdf/cv.pdf" target="_blank">
+        <a class="ml-auto mr-2" href="/assets/pdf/CV.pdf" target="_blank">
         <img height="60px" src="/assets/img/pdf_icon.svg">
         </a>
     </div>
@@ -19,7 +19,12 @@ nav: true
 	{% for entry in site.data.cv %}
 		<div class="card mt-3 p-3">
 			<h3 class="card-title">{{ entry.title }}</h3>
-			{% if entry.type == "list" %}
+            {% if entry.title == "Selected Publications" %}
+                <div class="publications">
+                    {% bibliography -f papers -q @*[selected=true]* %}
+                    <b>Note</b>: For the complete publications list, please see the <a href="publications">publications</a> page.
+                </div>
+			{% elsif entry.type == "list" %}
 				<ul class="card-text font-weight-light list-group list-group-flush">
 				{% for content in entry.contents %}
 					<li class="list-group-item">{{ content }}</li>
@@ -49,7 +54,7 @@ nav: true
                 <table class="table table-sm table-borderless">
                     {% for content in entry.contents %}
                         <tr>
-                            <td class="p-0 pr-2 font-weight-bold text-right"><b>{{ content.name }}</b></td>
+                            <td class="p-0 pr-2 font-weight-bold text-right">{{ content.name }}</td>
                             <td class="p-0 pl-2 font-weight-light text-left">{{ content.value }}</td>
                         </tr>
                     {% endfor %}

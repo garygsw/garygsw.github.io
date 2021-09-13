@@ -2,7 +2,7 @@
 ---
 
 <div class="row">
-  <div class="col-sm-2 abbr">
+  <div class="col-sm-2 abbr" style="padding-left:30px;">
   {% if entry.abbr %}
     {% if site.data.venues[entry.abbr] %}
     <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
@@ -11,6 +11,7 @@
     {% endif %}
   {% endif %}
   </div>
+
 
   <div id="{{entry.key}}" class="col-sm-8">
     {% if entry.type == "thesis" %}
@@ -68,14 +69,16 @@
       </div>
 
       <div class="periodical">
-        {% if entry.type == "article" %}
+        {% if entry.type == "mastersthesis" %}
+          <em>Master's Thesis at {{entry.school}}</em>
+        {% elsif entry.type == "article" %}
           <em>{{entry.journal}}</em>
         {% elsif entry.type == "inproceedings" %}
           <em>In {{entry.booktitle}}</em>
         {% endif %}
-        {% if entry.year %}
+        <!-- {% if entry.year %}
           {{entry.year}}
-        {% endif %}
+        {% endif %} -->
       </div>
     {% endif %}
 
@@ -128,7 +131,9 @@
       {% endif %}
       <a class="bibtex btn btn-sm z-depth-0 transition" role="button">Bib</a>
       {% if entry.award and entry.award-link %}
-        Award: <a href="{{ entry.award-link }}" target="_blank"> {{ entry.award }} </a>
+        <div class="award">
+          Award: <a href="{{ entry.award-link }}" target="_blank"> {{ entry.award }} </a>
+        </div>
       {% endif %}
     </div>
 

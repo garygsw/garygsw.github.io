@@ -3,99 +3,103 @@
   contents:
       - name: "Full Name:"
         value: Gary Goh Shing Wee
-      - name: "Email:"
-        value: garygsw@gmail.com
-      - name: "Interests:"
+      - name: "<i class='fas fa-envelope'></i> Email:"
+        value: <a href="mailto:garygsw@gmail.com"><code>garygsw@gmail.com</code></a>
+      - name: "Interest:"
         value: Explainable AI with a focus on interpretability of deep learning machine learning models
 
 - title: Education
   type: table
   contents:
-      - title: Singapore University of Technology and Design (SUTD)
-        subtitle: <i>Masters of Engineering (Research)</i> in Computer Science
+      - title: <a href="https://www.sutd.edu.sg/">Singapore University of Technology and Design (SUTD)</a> - <a href="https://istd.sutd.edu.sg/">ISTD Pillar</a>
+        subtitle: <i>Master of Engineering (Research) in Computer Science and Design</i>
         year: 2016-2021
         start_date: Sept 2016
         end_date: Sept 2021
         location: Singapore
         description:
-            - Advised by <a href="https://www.visual-intelligence.no/people/alexander-binder" target="_blank"><b>Prof. Alexander Binder</b></a> (previously <a href="https://frcchang.github.io/" target="_blank"><b>Prof. Yue Zhang</b></a>)
-            - "<b>Cumulative Grade Point Average</b>: 5.0 / 5.0"
+            - Advised by <a href="https://www.visual-intelligence.no/people/alexander-binder"><b>Prof. Alexander Binder</b></a> and previously <a href="https://frcchang.github.io/"><b>Prof. Yue Zhang</b></a>
+            - "<b>Cumulative Grade Point Average</b>: 5.00 / 5.00"
             - "<b>Thesis</b>: <i>Analyzing Deep Learning Models for Traffic Prediction</i>"
-            - "<b>Thesis committee</b>: Zhou Jianyng, Lim Kwan Hui, Berrak Sisman, Liu Jun"
+            - "<b>Thesis committee</b>: Zhou Jianying, Lim Kwan Hui, Berrak Sisman, Liu Jun"
             - "<b>Coursework</b>: Analysis of Algorithms, Statistics, Computer Networks, Theory and Application of Software Security, Database Systems"
-            - Teaching assistant for Computation Structures labs taught by <a href="https://www.okakurniawan.net" target="_blank"><b>Dr. Oka Kurniawan</b></a>
-            - Funded by Singapore-MIT Alliance for Research and Technology (<a href="https://smart.mit.edu" target="_blank"><b>SMART</b></a>) Fellowship
-      - title: National University of Singapore (NUS) - Faculty of Engineering
+            - Teaching assistant for Computation Structures labs taught by <a href="https://www.okakurniawan.net"><b>Dr. Oka Kurniawan</b></a>
+            - Funded by Singapore-MIT Alliance for Research and Technology (<a href="https://smart.mit.edu"><b>SMART</b></a>) Fellowship
+      - title: <a href="https://www.nus.edu.sg">National University of Singapore (NUS)</a> - <a href="https://www.eng.nus.edu.sg">Faculty of Engineering</a>
         subtitle:
-            "<i>Bachelor of Engineering</i> in Industrial and Systems Engineering<br/>
-            Specialization: <i>Logistics and Systems Optimization</i>"
+            <i>Bachelor of Engineering in <a href="https://www.eng.nus.edu.sg/isem/">Industrial and Systems Engineering</a></i>
         year: 2010-2014
         start_date: Aug 2010
         end_date: Jul 2014
         location: Singapore
         description:
+            - "<b>Area of specialization</b>: <i>Logistics and Systems Optimization</i>"
             - "<b>Cumulative Aggregate Point</b>: 4.32 / 5.00 (2<sup>nd</sup> Upper Honors)"
-            - "<b>Coursework</b>: Operations Research, Simulation, Statistics, Probability, Supply Chain Modeling, Inventory Management"
+            - "<b>Coursework</b>: Operation Research, Simulation, Statistics, Probability, Data Structures and Algorithms,Software Engineering, Supply Chain and Inventory Management"
             - "<b>Thesis</b>: <i>Multi-mode Switching Problem for Production/Inventory Systems</i>"
-            - Thesis supervised by <a href="https://www.eng.nus.edu.sg/isem/staff/he-shuangchi/" target="_blank"><b>Prof. Shuangchi He</b></a> and <a href="https://sites.google.com/site/dachengyao/" target="_blank"><b>Prof. Dacheng Yao</b></a>
+            - Thesis supervised by <a href="https://www.eng.nus.edu.sg/isem/staff/he-shuangchi/"><b>Prof. Shuangchi He</b></a> and <a href="https://sites.google.com/site/dachengyao/"><b>Prof. Dacheng Yao</b></a>
             - "<b>Awards</b>: Faculty’s Dean List (Top 5% of Cohort) – 2011/12 & 2013/14 Semester 2"
 
 - title: Work Experience
   type: table
   contents:
-      - title: Agency for Science, Technology and Research (A*STAR)
+      - title: <a href="https://www.a-star.edu.sg/">Agency for Science, Technology and Research (A*STAR)</a>
         subtitle:
-            "Singapore Institute of Manufacturing Technology (SIMTech)<br/>
-            Research Engineer in <i>Planning & Operations Management Group (POMG)</i>"
+            "<i><a href='https://www.a-star.edu.sg/simtech'>Singapore Institute of Manufacturing Technology (SIMTech)</a><br/>
+            Research Engineer in <a href='https://www.a-star.edu.sg/simtech/research/POMG'>Planning and Operations Management Group (POMG)</a></i>"
         year: 2014-2016
         start_date: Aug 2014
         end_date: Aug 2016
         location: Singapore
         description:
             - Research in data mining for supply chain and manufacturing systems
-            - Develop full-stack software for <a href="https://www.a-star.edu.sg/simtech/model-factory@simtech/overview" target="_blank"><b>Manufacturing Control Tower</b></a> program
-            - Provide text-mining solutions for the <a href="https://www.businesswire.com/news/home/20150311005857/en/Antuit-and-A*STAR%E2%80%99s-SIMTech-Launch-Supply-Chain-Analytics-Lab" target="_blank"><b>Antuit-SIMTech Supply Chain Analytics Lab</b></a>
-            - Design and implement full-stack desktop application with data visualization and demand forecasting capability in a <a href="https://www.a-star.edu.sg/enterprise/innovation-offerings/programmes-for-smes/technology-for-enterprise-capability-upgrading" target="_blank"><b>T-Up</b></a> secondment program to <a href="http://www.jrgroup.com.sg/jr_vending.aspx" target="_blank"><b>JR Vending</b></a>
-      - title: Electrify
-        subtitle: IoT Software Engineer (Freelance)
+            - Develop full-stack software for <a href="https://www.a-star.edu.sg/simtech/model-factory@simtech/overview"><b>Manufacturing Control Tower</b></a> program
+            - Provide text-mining solutions for the <a href="https://www.businesswire.com/news/home/20150311005857/en/Antuit-and-A*STAR%E2%80%99s-SIMTech-Launch-Supply-Chain-Analytics-Lab"><b>Antuit-SIMTech Supply Chain Analytics Lab</b></a>
+            - Design and implement full-stack desktop application with data visualization and demand forecasting capability in a <a href="https://www.a-star.edu.sg/enterprise/innovation-offerings/programmes-for-smes/technology-for-enterprise-capability-upgrading"><b>T-Up</b></a> secondment program to <a href="http://www.jrgroup.com.sg/jr_vending.aspx"><b>JR Vending</b></a>
+      - title: <a href="https://electrify.asia">Electrify</a>
+        subtitle: <i>IoT Software Engineer (Freelance)</i>
         year: 2018-2019
         start_date: Apr 2018
         end_date: June 2019
         location: Singapore
         description:
             - Develop and maintain software for unix-based embedded systems in remote devices to collect sensor data under intermittent internet connection environment
-            - Utilize MQQT messaging protocol with <a href="https://aws.amazon.com/iot/" target="_blank"><b>AWS IoT Framework</b></a> to ensure reliable and secure data collection
+            - Utilize MQQT messaging protocol with <a href="https://aws.amazon.com/iot/"><b>AWS IoT Framework</b></a> to ensure reliable and secure data collection
             - Create AWS Lambda functions to relay data exchange between content management server to remote devices
-      - title: Integrated Decision Systems Consultancy (IDSC)
-        subtitle: Associate Consultant (Intern)
+      - title: <a href="https://www.idsc.com.sg">Integrated Decision Systems Consultancy (IDSC)</a>
+        subtitle: <i>Associate Consultant (Intern)</i>
         year: 2013-2014
         start_date: Jan 2013
         end_date: Jan 2014
         location: Singapore
         description:
-            - Built optimization models for stock mix optimization (<a href="https://www.idsc.com.sg/products-solutions" target="_blank"><b>OPTIMAX</b></a>), supply chain network optimization, and inventory optimization for the consultancy's clientele
+            - Built optimization models for stock mix optimization (<a href="https://www.idsc.com.sg/products-solutions"><b>OPTIMAX</b></a>), supply chain network optimization, and inventory optimization for the consultancy's clientele
             - Perform simulation analysis to evaluate various inventory re-order policies
             - Develop demand forecasting and data visualization capability into software solutions
+
+- title: Selected Publications
 
 - title: Computer Skills
   type: map
   contents:
-      - name: "Programming languages:"
+      - name: "<i class='fab fa-github'></i><b> GitHub</b>:"
+        value: "<a href='https://github.com/garygsw'><code>https://github.com/garygsw</code></a>"
+      - name: "<b>Programming languages</b>:"
         value: Python, C/C++/C#, Javascript, Java, Microsoft VBA, R
-      - name: "Operating systems:"
+      - name: "<b>Operating systems</b>:"
         value: Mac OS, Windows, Ubuntu, Raspberry Pi OS, Linux Mint
-      - name: "Python libraries:"
+      - name: "<b>Python libraries</b>:"
         value: PyTorch, NumPy, Pandas, SciPy, Keras, Theano, scikit-learn, SpaCy, Django, ...
-      - name: "Frameworks:"
+      - name: "<b>Frameworks</b>:"
         value: Jupyter, Qt, AWS, Miscrosoft .NET 4.5, Cordova
-      - name: "Database Systems:"
+      - name: "<b>Database systems</b>:"
         value: MySQL, PostgreSQL, SQLite, MongoDB
-      - name: "Client-side technologies:"
+      - name: "<b>Client-side technologies</b>:"
         value: HTML5, CSS3, JQuery, D3.js, AngularJS
-      - name: "Software (others):"
+      - name: "<b>Other software</b>:"
         value: Automod, AIMMS, Adobe Photoshop and Illustrator
 
-- title: Other Interests
+- title: Others
   type: list
   contents:
       - "<b>Languages</b>: English (fluent), Chinese(mother tongue)"
