@@ -22,7 +22,7 @@ nav: true
             {% if entry.title == "Selected Publications" %}
                 <div class="publications">
                     {% bibliography -f papers -q @*[selected=true]* %}
-                    <b>Note</b>: For the complete publications list, please see the <a href="publications">publications</a> page.
+                    <b>Note</b>: For the complete publications list, please see the <a href="publications">publications</a> page or my <a href="https://scholar.google.com/citations?user=SuI63bsAAAAJ">Google scholar</a>.
                 </div>
 			{% elsif entry.type == "list" %}
 				<ul class="card-text font-weight-light list-group list-group-flush">
