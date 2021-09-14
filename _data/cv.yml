@@ -1,12 +1,15 @@
 - title: Profile
   type: map
   contents:
-      - name: "Full Name:"
+      - name: "Name:"
         value: Gary Goh Shing Wee
-      - name: "<i class='fas fa-envelope'></i> Email:"
-        value: <a href="mailto:garygsw@gmail.com"><code>garygsw@gmail.com</code></a>
       - name: "Interest:"
         value: Explainable AI with a focus on interpretability of deep learning machine learning models
+      - name: "<i class='fas fa-envelope'></i> :"
+        value: <a href="mailto:garygsw@gmail.com"><code>garygsw@gmail.com</code></a>
+      - name: "<i class='fab fa-linkedin-in'></i> :"
+        value: <a href="https://www.linkedin.com/in/garygsw"><code>linkedin.com/in/garygsw</code></a>
+      
 
 - title: Education
   type: table
