@@ -819,3 +819,59 @@ html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
 }
+
+
+// Category Tags
+.post-categories {
+  grid-column: text;
+}
+
+.cat-tags .cat-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--global-text-color);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid var(--global-text-color);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.authors-only {
+  grid-template-columns: none;
+}
+
+.toc {
+  height: 0;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-self: center;
+  padding-right: 3em;
+  padding-left: 2em;
+  font-size: .9em;
+}
+
+
+// Headroom
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  margin-top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
