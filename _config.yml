@@ -27,7 +27,7 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
+navbar_fixed: false
 footer_fixed: true
 
 # Dimensions
@@ -218,8 +218,7 @@ enable_navbar_social:
     true # enables displaying social links in the
     # navbar on the about page
 enable_project_categories:
-    true # enables categorization of projects into
-    # multiple categories
+    true # enables categorization of projects into # multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 
 # -----------------------------------------------------------------------------
