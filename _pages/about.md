@@ -3,23 +3,26 @@ layout: about
 title: about
 nav-title: about
 permalink: /
-description: Post Graduate Student • <a href="https://istd.sutd.edu.sg">ISTD Pillar</a> • <a href="https://www.sutd.edu.sg">SUTD</a>
+description: Data Scientist • <a href="https://www.garena.sg">Garena</a> • <a href="https://www.sea.com/home">Sea</a>
 
 profile:
     align: right
     image: prof_pic.jpg
     address: >
         <p><i class="fab fa-wpforms"></i> <a href="cv">Résumé/CV</a></p>
-        <p>8 Somapah Rd</p>
-        <p>Singapore 487372</p>
+        <p>1 Fusionopolis Place #17-10</p>
+        <p>Singapore 138522</p>
+
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello. I am a M.Eng. graduate student in [ISTD Pillar](https://istd.sutd.edu.sg) at [Singapore University of Design and Technology](https://www.sutd.edu.sg), advised by [Alexander Binder](https://www.visual-intelligence.no/people/alexander-binder) and [Kwan Hui Lim](https://sites.google.com/site/limkwanhui/).
-My current research is on interpretability with the focus on explainable artificial intelligence methods for deep learning.
+Hello 👋 Welcome! I am a Data Scientist at [Garena](https://www.garena.sg), and I love to explore data-driven approaches to solve real-world problems.
+
+I got my M.Eng. from [Singapore University of Design and Technology](https://www.sutd.edu.sg) [ISTD Pillar](https://istd.sutd.edu.sg), advised by [Alexander Binder](https://www.visual-intelligence.no/people/alexander-binder) and [Kwan Hui Lim](https://sites.google.com/site/limkwanhui/).
+I did research on explainable artificial intelligence (xAI) methods for interpreting deep learning models.
 
 I was also previously advised by [Yue Zhang](https://frcchang.github.io) and [Patrick Jaillet](http://web.mit.edu/jaillet/www/), with my study generously funded by [FM IRG](https://smart.mit.edu/research/fm/about-fm) at [Singapore-MIT Alliance for Research and Technology](https://smart.mit.edu).
 

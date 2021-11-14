@@ -8,7 +8,7 @@ middle_name: S. W.
 last_name: Goh
 email: garygsw@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-    My personal blog that I use to share and document my thoughts and important things that I have learnt.
+  My personal blog that I use to share and document my thoughts and important things that I have learnt.
 footer_text:
 # Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 icon: # the emoji used as the favicon
@@ -28,7 +28,7 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 # -----------------------------------------------------------------------------
 
 navbar_fixed: false
-footer_fixed: true
+footer_fixed: false
 
 # Dimensions
 max_width: 800px
@@ -64,7 +64,7 @@ wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
 
 contact_note: >
-    The best way to contact me is by email.
+  The best way to contact me is by email.
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
@@ -79,7 +79,7 @@ permalink: /blog/:title/
 
 # Pagination
 pagination:
-    enabled: true
+  enabled: true
 
 # Comments
 disqus_shortname: # put your disqus shortname
@@ -90,26 +90,26 @@ disqus_shortname: # put your disqus shortname
 # -----------------------------------------------------------------------------
 
 collections:
-    news:
-        defaults:
-            layout: post
-        output: true
-        permalink: /news/:path/
-    projects:
-        output: true
-        permalink: /projects/:path/
-    puzzles:
-        output: true
-        permalink: /puzzles/:path/
-    books:
-        output: true
-        permalink: /books/:path/
-    movies:
-        output: true
-        permalink: /movies/:path/
-    dad jokes:
-        output: true
-        permalink: /dad-jokes/:path/
+  news:
+    defaults:
+      layout: post
+    output: true
+    permalink: /news/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  puzzles:
+    output: true
+    permalink: /puzzles/:path/
+  books:
+    output: true
+    permalink: /books/:path/
+  movies:
+    output: true
+    permalink: /movies/:path/
+  dad jokes:
+    output: true
+    permalink: /dad-jokes/:path/
 
 news_limit: 5
 
@@ -121,42 +121,42 @@ news_limit: 5
 markdown: kramdown
 highlighter: rouge
 highlight_theme: # https://github.com/jwarby/jekyll-pygments-themes
-    light: autumn
-    dark: monokai
+  light: autumn
+  dark: monokai
 kramdown:
-    input: GFM # github flavored markdown
-    syntax_highlighter_opts:
-        css_class: "highlight"
-        span:
-            line_numbers: false
-        block:
-            line_numbers: false
-            start_line: 1
+  input: GFM # github flavored markdown
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 
 # Includes & excludes
 include: ["_pages"]
 exclude:
-    - bin
-    - Gemfile
-    - Gemfile.lock
-    - vendor
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 keep_files:
-    - CNAME
-    - .nojekyll
-    - .git
+  - CNAME
+  - .nojekyll
+  - .git
 
 # Plug-ins
 plugins:
-    - jekyll-email-protect
-    - jekyll-github-metadata
-    - jekyll-feed
-    - jekyll-paginate-v2
-    - jekyll/scholar
-    - jekyll-twitter-plugin
-    - jekyll-sitemap
-    - jekyll-seo-tag
-    - jekyll-target-blank
-    - jemoji
+  - jekyll-email-protect
+  - jekyll-github-metadata
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll/scholar
+  - jekyll-twitter-plugin
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-target-blank
+  - jemoji
 
 # Extras
 github: [metadata]
@@ -166,41 +166,41 @@ github: [metadata]
 # -----------------------------------------------------------------------------
 
 scholar:
-    last_name: Goh
-    first_name: [Gary S. W., S. W., G. S. W.]
+  last_name: Goh
+  first_name: [Gary S. W., S. W., G. S. W.]
 
-    style: apa
-    locale: en
+  style: apa
+  locale: en
 
-    source: /_bibliography/
-    bibliography: papers.bib
-    bibliography_template: bib
-    bibtex_filters: [latex, smallcaps, superscript]
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
 
-    replace_strings: true
-    join_strings: true
-    bibtex_skip_fields:
-        - abstract
-        - editor
-        - month_numeric
-        - month
-        - date
-        - html
-        - abbr
-        - code
-        - poster
-        - slides
-        - pdf
-        - selected
-        - talk
-        - award
-        - award-link
+  replace_strings: true
+  join_strings: true
+  bibtex_skip_fields:
+    - abstract
+    - editor
+    - month_numeric
+    - month
+    - date
+    - html
+    - abbr
+    - code
+    - poster
+    - slides
+    - pdf
+    - selected
+    - talk
+    - award
+    - award-link
 
-    details_dir: bibliography
-    details_layout: bibtex.html
-    details_link: Details
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
 
-    query: "@*"
+  query: "@*"
 
 # -----------------------------------------------------------------------------
 # Optional Features
@@ -211,14 +211,13 @@ enable_panelbear_analytics: false # enables panelbear analytics
 enable_mansory: true # enables automatic project cards arangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips:
-    false # enables automatic tooltip links generated
-    # for each section titles on pages and posts
+  false # enables automatic tooltip links generated
+  # for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social:
-    true # enables displaying social links in the
-    # navbar on the about page
-enable_project_categories:
-    true # enables categorization of projects into # multiple categories
+  true # enables displaying social links in the
+  # navbar on the about page
+enable_project_categories: true # enables categorization of projects into # multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 
 # -----------------------------------------------------------------------------
@@ -226,32 +225,32 @@ enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 # -----------------------------------------------------------------------------
 
 academicons:
-    version: "1.9.0"
-    integrity: "sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg=="
+  version: "1.9.0"
+  integrity: "sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg=="
 bootstrap:
-    version: "4.5.2"
-    integrity:
-        css: "sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
-        js: "sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ=="
+  version: "4.5.2"
+  integrity:
+    css: "sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
+    js: "sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ=="
 fontawesome:
-    version: "5.14.0"
-    integrity: "sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  version: "5.14.0"
+  integrity: "sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
 jquery:
-    version: "3.5.1"
-    integrity: "sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+  version: "3.5.1"
+  integrity: "sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
 mathjax:
-    version: "3.2.0"
+  version: "3.2.0"
 mansory:
-    version: "4.2.2"
-    integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+  version: "4.2.2"
+  integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
 mdb:
-    version: "4.19.1"
-    integrity:
-        css: "sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q=="
-        js: "sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw=="
+  version: "4.19.1"
+  integrity:
+    css: "sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q=="
+    js: "sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw=="
 popper:
-    version: "2.4.4"
-    integrity: "sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A=="
+  version: "2.4.4"
+  integrity: "sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A=="
 medium_zoom:
-    version: "1.0.6"
-    integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
+  version: "1.0.6"
+  integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
