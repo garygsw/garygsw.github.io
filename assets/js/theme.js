@@ -1,7 +1,3 @@
----
-layout: none
----
-
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
 let toggleTheme = (theme) => {
@@ -26,9 +22,9 @@ let setTheme = (theme) =>  {
 
   // Code Syntax Highlighting
   if (theme == "dark") {
-    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.dark }}.css" />'
+    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/monokai.css" />'
   } else {
-    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.light }}.css" />'
+    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/autumn.css" />'
   }
   $('#syntax-theme').remove();
   $('head').append(syntax_link);
