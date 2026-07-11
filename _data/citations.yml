@@ -1,0 +1,38 @@
+# Google Scholar citation counts, keyed by "<scholar_userid>:<google_scholar_id>".
+# Auto-refreshed by .github/workflows/update-citations.yml (bin/update_scholar_citations.py).
+# Values below were seeded from the Google Scholar profile (user SuI63bsAAAAJ).
+metadata:
+  last_updated: "2026-07-11"
+papers:
+  "SuI63bsAAAAJ:j3f4tGmQtD8C":
+    title: Understanding Integrated Gradients with SmoothTaylor for Deep Neural Network Attribution
+    year: 2021
+    citations: 63
+  "SuI63bsAAAAJ:u-x6o8ySG0sC":
+    title: "Forecast UPC-level FMCG demand, Part II: Hierarchical Reconciliation"
+    year: 2015
+    citations: 19
+  "SuI63bsAAAAJ:4JMBOYKVnBMC":
+    title: Twitter-Informed Crowd Flow Prediction
+    year: 2018
+    citations: 16
+  "SuI63bsAAAAJ:d1gkVwhDpl0C":
+    title: Sparsity Adjusted Information Gain for Feature Selection in Sentiment Analysis
+    year: 2015
+    citations: 14
+  "SuI63bsAAAAJ:_Qo2XoVZTnwC":
+    title: "Forecast UPC-level FMCG demand, Part III: Grouped Reconciliation"
+    year: 2016
+    citations: 9
+  "SuI63bsAAAAJ:u5HHmVD_uO8C":
+    title: "Forecast UPC-level FMCG demand, Part I: Exploratory Analysis and Visualization"
+    year: 2015
+    citations: 9
+  "SuI63bsAAAAJ:RHpTSmoSYBkC":
+    title: "Spatial Data Dimension Reduction using Quadtree: A Case Study on Satellite-derived Solar Radiation"
+    year: 2016
+    citations: 5
+  "SuI63bsAAAAJ:e5wmG9Sq2KIC":
+    title: Optimizing Performance of Sentiment Analysis through Design of Experiments
+    year: 2016
+    citations: 3

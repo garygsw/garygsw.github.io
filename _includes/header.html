@@ -76,11 +76,19 @@
           {% endif %}
           {% endif %}
           {% endfor %}
+          {% if site.enable_search %}
+            <div class = "toggle-container">
+              <a id = "search-toggle" role="button" title="Search (⌘K / Ctrl-K)">
+                  <i class="fas fa-search"></i>
+              </a>
+            </div>
+          {% endif %}
           {% if site.enable_darkmode %}
             <div class = "toggle-container">
-              <a id = "light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
+              <a id = "light-toggle" role="button" title="Cycle light / dark / system theme">
+                  <i class="fas fa-sun" title="Switch to dark theme"></i>
+                  <i class="fas fa-moon" title="Switch to system theme"></i>
+                  <i class="fas fa-adjust" title="Switch to light theme"></i>
               </a>
             </div>
           {% endif %}

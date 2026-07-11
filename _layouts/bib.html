@@ -137,6 +137,22 @@
       {% endif %}
     </div>
 
+    <!-- Google Scholar citation badge (count from _data/citations.yml, refreshed by a scheduled Action) -->
+    {% if site.enable_publication_badges.google_scholar and entry.google_scholar_id %}
+    <div class="badges">
+      <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.scholar_userid }}&citation_for_view={{ site.scholar_userid }}:{{ entry.google_scholar_id }}"
+         target="_blank" rel="noopener" aria-label="Google Scholar citations" role="button">
+        {% assign citation_count = 0 %}
+        {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+        {% if site.data.citations.papers[scholar_id_key] %}
+          {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
+        {% endif %}
+        <img src="https://img.shields.io/badge/Cited_by-{{ citation_count }}-4285F4?logo=googlescholar&logoColor=white&labelColor=4d4d4d"
+             alt="{{ citation_count }} Google Scholar citations" loading="lazy">
+      </a>
+    </div>
+    {% endif %}
+
     <!-- Hidden abstract block -->
     {% if entry.abstract %}
     <div class="abstract hidden">

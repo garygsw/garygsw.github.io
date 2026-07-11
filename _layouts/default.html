@@ -22,6 +22,11 @@
 
     {% include footer.html %}
 
+    <!-- Site search -->
+    {% if site.enable_search %}
+      {% include search/ninja_keys.html %}
+    {% endif %}
+
   </body>
 
   {% include scripts/bootstrap.html %}

@@ -15,15 +15,6 @@
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
   --global-cv-bg-color: #{$white-color};
-
-  .fa-sun {
-    display : none;
-  }
-  .fa-moon {
-    padding-left: 10px;
-    padding-top: 12px;
-    display : block;
-  }
 }
 
 html[data-theme='dark'] {
@@ -39,13 +30,39 @@ html[data-theme='dark'] {
   --global-footer-link-color: #{$black-color};
   --global-distill-app-color: #{$grey-color-light};
   --global-cv-bg-color: #{$code-bg-color-dark};
+}
 
-  .fa-sun {
+// Navbar theme toggle: show the icon for the ACTIVE setting
+// (light -> sun, dark -> moon, system -> adjust). One icon at a time.
+#light-toggle {
+  .fa-sun,
+  .fa-moon,
+  .fa-adjust {
+    display: none;
     padding-left: 10px;
     padding-top: 12px;
-    display : block;
   }
-  .fa-moon {
-    display : none;
+}
+html[data-theme-setting='light'] #light-toggle .fa-sun { display: block; }
+html[data-theme-setting='dark'] #light-toggle .fa-moon { display: block; }
+html[data-theme-setting='system'] #light-toggle .fa-adjust { display: block; }
+
+// Fallback before JS sets the attribute: show the system icon.
+html:not([data-theme-setting]) #light-toggle .fa-adjust { display: block; }
+
+// Navbar search icon
+#search-toggle {
+  cursor: pointer;
+  .fa-search {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
   }
+}
+
+// ninja-keys command palette — match the site accent
+ninja-keys {
+  --ninja-accent-color: var(--global-theme-color);
+  --ninja-font-family: inherit;
+  --ninja-z-index: 2000;
 }

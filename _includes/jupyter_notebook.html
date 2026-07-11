@@ -1,0 +1,18 @@
+{%- comment -%}
+  Embed a Jupyter notebook.
+
+  Preferred (needs Jupyter installed + jekyll-jupyter-notebook, which is in the Gemfile):
+      {% jupyter_notebook "assets/jupyter/blog.ipynb" %}
+
+  Portable fallback (no local Jupyter toolchain) — embed pre-rendered notebook HTML
+  or an nbviewer page in an iframe:
+      {% include jupyter_notebook.html path="/assets/jupyter/demo.html" %}
+      {% include jupyter_notebook.html url="https://nbviewer.org/github/<user>/<repo>/blob/main/nb.ipynb" %}
+{%- endcomment -%}
+{%- if include.path -%}
+  {%- assign nb_src = include.path | relative_url -%}
+{%- else -%}
+  {%- assign nb_src = include.url -%}
+{%- endif -%}
+<iframe class="jupyter-notebook-iframe" src="{{ nb_src }}" loading="lazy"
+        title="{{ include.title | default: 'Jupyter notebook' }}"></iframe>

@@ -21,3 +21,6 @@ $(function () {$('[data-toggle="tooltip"]').tooltip()})
 <script src="{{ '/assets/js/clipboard.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/copy_code.js' | relative_url }}"></script>
 
+<!-- Charts / diagrams / pseudocode (opt-in per page via front matter) -->
+{% include scripts/diagrams.html %}
+

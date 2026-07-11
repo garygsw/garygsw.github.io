@@ -4,62 +4,86 @@ layout: none
 
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-let toggleTheme = (theme) => {
-  if (theme == "dark") {
-    setTheme("light");
-  } else {
-    setTheme("dark");
-  }
-}
+// Theme setting is one of: "light", "dark", "system".
+// "system" follows the OS `prefers-color-scheme` and updates live.
 
+let systemPrefersDark = () =>
+  window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-let setTheme = (theme) =>  {
-  transTheme();
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
+let getThemeSetting = () => {
+  const stored = localStorage.getItem("theme");
+  if (stored === "light" || stored === "dark" || stored === "system") {
+    return stored;
   }
-  else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  localStorage.setItem("theme", theme);
-
-
-  // Code Syntax Highlighting
-  if (theme == "dark") {
-    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.dark }}.css" />'
-  } else {
-    var syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.light }}.css" />'
-  }
-  $('#syntax-theme').remove();
-  $('head').append(syntax_link);
-  
-  // Updates the background of medium-zoom overlay.
-  if (typeof medium_zoom !== 'undefined') {
-    medium_zoom.update({
-      background: getComputedStyle(document.documentElement)
-          .getPropertyValue('--global-bg-color') + 'ee',  // + 'ee' for trasparency.
-    })
-  }
+  return "system";
 };
 
+// Cycle: light -> dark -> system -> light
+let toggleTheme = () => {
+  const current = getThemeSetting();
+  let next;
+  if (current === "light") {
+    next = "dark";
+  } else if (current === "dark") {
+    next = "system";
+  } else {
+    next = "light";
+  }
+  localStorage.setItem("theme", next);
+  applyTheme();
+};
+
+let applyTheme = () => {
+  transTheme();
+
+  const setting = getThemeSetting();
+  const effective = setting === "system" ? (systemPrefersDark() ? "dark" : "light") : setting;
+
+  // Drives the icon shown in the navbar toggle.
+  document.documentElement.setAttribute("data-theme-setting", setting);
+
+  // Drives the actual colour palette (light == no attribute).
+  if (effective === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+
+  // Code Syntax Highlighting
+  let syntax_link;
+  if (effective === "dark") {
+    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.dark }}.css" />';
+  } else {
+    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.light }}.css" />';
+  }
+  if (window.jQuery) {
+    $("#syntax-theme").remove();
+    $("head").append(syntax_link);
+  }
+
+  // Updates the background of medium-zoom overlay.
+  if (typeof medium_zoom !== "undefined") {
+    medium_zoom.update({
+      background: getComputedStyle(document.documentElement)
+          .getPropertyValue("--global-bg-color") + "ee",  // + 'ee' for transparency.
+    });
+  }
+};
 
 let transTheme = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
     document.documentElement.classList.remove("transition");
-  }, 500)
-}
+  }, 500);
+};
 
-
-let initTheme = (theme) => {
-  if (theme == null) {
-    const userPref = window.matchMedia;
-    if (userPref && userPref('(prefers-color-scheme: dark)').matches) {
-        theme = 'dark';
+// Re-apply when the OS theme changes while we're following the system.
+if (window.matchMedia) {
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    if (getThemeSetting() === "system") {
+      applyTheme();
     }
-  }
-  setTheme(theme);
+  });
 }
 
-
-initTheme(localStorage.getItem("theme"));
+applyTheme();
