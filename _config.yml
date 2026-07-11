@@ -220,10 +220,9 @@ enable_navbar_social:
 enable_project_categories: true # enables categorization of projects into # multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 enable_search: true # enables the ninja-keys command-palette site search
-# Client-side citation / attention badges on publications (render only when a DOI is present)
+# Google Scholar citation badge on publications (count sourced from _data/citations.yml)
 enable_publication_badges:
-  altmetric: true
-  dimensions: true
+  google_scholar: true
 
 # -----------------------------------------------------------------------------
 # Library versions
