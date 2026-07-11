@@ -1,0 +1,44 @@
+<!-- Full-site command-palette search (ninja-keys). Opens with Cmd/Ctrl-K or the navbar icon. -->
+<ninja-keys placeholder="Search pages, posts, projects..." hideBreadcrumbs></ninja-keys>
+
+<script>
+  (function () {
+    var items = [
+      {% assign sorted_pages = site.pages | sort: "nav-title" %}
+      {% for p in sorted_pages %}{% if p.nav and p.autogen == nil %}
+      { title: {{ p.nav-title | default: p.title | jsonify }}, section: "Pages", url: {{ p.url | relative_url | jsonify }}, icon: "fa-file-lines" },
+      {% endif %}{% endfor %}
+      {% for post in site.posts %}
+      { title: {{ post.title | jsonify }}, section: "Blog", url: {{ post.url | relative_url | jsonify }}, icon: "fa-pen-nib" },
+      {% endfor %}
+      {% for pr in site.projects %}
+      { title: {{ pr.title | jsonify }}, section: "Projects", url: {{ pr.url | relative_url | jsonify }}, icon: "fa-diagram-project" },
+      {% endfor %}
+    ];
+
+    function mount() {
+      var ninja = document.querySelector("ninja-keys");
+      if (!ninja) return;
+      ninja.data = items.map(function (it) {
+        return {
+          id: it.section + ": " + it.title,
+          title: it.title,
+          section: it.section,
+          icon: '<i class="fas ' + it.icon + '"></i>',
+          handler: function () { window.location.href = it.url; },
+        };
+      });
+      var trigger = document.getElementById("search-toggle");
+      if (trigger) {
+        trigger.addEventListener("click", function (e) {
+          e.preventDefault();
+          ninja.open();
+        });
+      }
+    }
+
+    if (document.readyState !== "loading") mount();
+    else document.addEventListener("DOMContentLoaded", mount);
+  })();
+</script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/ninja-keys@1.2.2/+esm"></script>

@@ -49,3 +49,20 @@ html[data-theme-setting='system'] #light-toggle .fa-adjust { display: block; }
 
 // Fallback before JS sets the attribute: show the system icon.
 html:not([data-theme-setting]) #light-toggle .fa-adjust { display: block; }
+
+// Navbar search icon
+#search-toggle {
+  cursor: pointer;
+  .fa-search {
+    padding-left: 10px;
+    padding-top: 12px;
+    display: block;
+  }
+}
+
+// ninja-keys command palette — match the site accent
+ninja-keys {
+  --ninja-accent-color: var(--global-theme-color);
+  --ninja-font-family: inherit;
+  --ninja-z-index: 2000;
+}
