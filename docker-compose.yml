@@ -1,0 +1,15 @@
+# Local development: `docker compose up` then open http://localhost:4000
+# Live-reload is served on port 35729. The repo is mounted so edits reload live;
+# installed gems are cached in a named volume to avoid re-installing each run.
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll
+      - bundle:/usr/local/bundle
+
+volumes:
+  bundle:
