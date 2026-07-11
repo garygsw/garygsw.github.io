@@ -1,23 +1,17 @@
 arXiv:
     url: https://arxiv.org
-    color: "#b31b1b"
 
 AAAI:
     url: https://aaai.org/Conferences/AAAI/aaai.php
-    color: "#1a4b8c"
 
 ICPR:
     url: https://iapr.org/conferences/
-    color: "#0076df"
 
 IEEE BigData:
     url: https://bigdata.ieee.org
-    color: "#00629b"
 
 ICDM:
     url: http://icdm.bigke.org
-    color: "#6a1b9a"
 
 SUTD:
     url: https://www.sutd.edu.sg/
-    color: "#c8102e"

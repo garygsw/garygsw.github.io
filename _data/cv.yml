@@ -24,12 +24,14 @@
       end_date: Present
       location: Singapore
       description:
-        - Work across the full data function end to end &mdash; data engineering, analytics, data science, and AI transformation &mdash; supporting management decision-making and fundraising
-        - Architected <b>Data Warehouse 2.0</b> on <a href="https://www.databricks.com"><b>Databricks</b></a>, migrating to a governed native catalog with CDC streaming via <b>AWS DMS</b> and cutting data-platform costs by ~80%
-        - Designed a company-wide AI operating model &mdash; a git-based knowledge base plus a governed <b>MCP</b> layer connecting AI agents to live company data (Databricks, Jira, GitHub, Drive, Gmail, Mixpanel) &mdash; and rolled out Claude and GPT/Codex org-wide with read-only and PII-ringfencing guardrails
-        - Built a self-healing LLM pipeline that auto-classifies Databricks job failures, self-repairs or opens PRs, and closes Jira tickets, eliminating manual triage
-        - Deployed predictive models, including quantile-regression doctor-demand forecasting, an AI Fraud/Waste/Abuse detection engine across 14 risk categories, and B2B corporate segmentation
-        - Data lead for the Series C fundraise data room; delivered self-serve natural-language analytics via <a href="https://www.databricks.com/product/ai-bi/genie"><b>Databricks Genie</b></a> and an MCP-connected agent
+        - "<b>Business Impact</b>: Drove regional data science initiatives (SG/MY/PH/HK/ID), delivering 10&ndash;30% incremental revenue and operational cost savings."
+        - "<b>Data Architecture</b>: Architected <b>Data Warehouse 2.0</b> on <a href='https://www.databricks.com'>Databricks</a>; migrated to a governed native catalog with CDC streaming via <b>AWS DMS</b>, slashing data platform costs by 80%."
+        - "<b>Company-Wide AI Transformation</b>: Designed a git-based knowledge base and a governed <b>MCP</b> layer connecting AI agents to live company data (Databricks, Jira, GitHub, Drive, Gmail, Mixpanel)."
+        - "<b>AI Governance</b>: Implemented read-only guardrails, PII ringfencing, and infrastructure guardrails while rolling out Claude and GPT/Codex org-wide."
+        - "<b>AI Agent Automation</b>: Built a self-healing LLM pipeline that auto-classifies Databricks job failures, self-repairs/opens PRs, and manages Jira tickets, eliminating manual triage."
+        - "<b>Clinical GenAI</b>: Deployed patient-facing &ldquo;AI Triage&rdquo; and doctor-facing &ldquo;Clinical Support&rdquo; bots using LangChain/LangGraph on AWS AgentCore, validated via in-house eval datasets."
+        - "<b>Self-Serve Analytics</b>: Integrated Databricks Genie with an MCP-connected agent for natural-language querying, reducing ad-hoc data requests from non-technical teams."
+        - "<b>Predictive Modeling</b>: Deployed quantile regression for doctor demand forecasting, an AI Fraud/Waste/Abuse detection engine across 14 risk categories, and B2B corporate segmentation models."
     - title: Data Scientist
       subtitle: "<i><a href='https://www.sea.com/home'>Sea Ltd</a> &mdash; <a href='https://www.garena.sg'>Garena</a></i>"
       year: 2021-2022

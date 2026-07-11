@@ -4,16 +4,10 @@
 <div class="row">
   <div class="col-sm-2 abbr" style="padding-left:30px;">
   {% if entry.abbr %}
-    {% assign venue = site.data.venues[entry.abbr] %}
-    {% if venue %}
-    <abbr class="badge"{% if venue.color %} style="background-color:{{ venue.color }};"{% endif %}>
-      {% if venue.url %}<a href="{{ venue.url }}" target="_blank" style="color:inherit;">{{ entry.abbr }}</a>{% else %}{{ entry.abbr }}{% endif %}
-    </abbr>
+    {% if site.data.venues[entry.abbr] %}
+    <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
     {% else %}
-    <abbr class="badge">{{ entry.abbr }}</abbr>
-    {% endif %}
-    {% if entry.selected %}
-    <abbr class="badge" style="background-color: var(--global-theme-color);" title="Selected publication">★</abbr>
+    <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
   {% endif %}
   </div>
