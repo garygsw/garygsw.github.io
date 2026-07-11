@@ -4,11 +4,11 @@
     - name: "Name:"
       value: Gary Goh Shing Wee
     - name: "Experience:"
-      value: "<b>3 years academic</b> experience in machine learning and predictive modeling + <b>1 year industrial</b> experience in building a complex recommendation system for an online video live-streaming and community platform"
+      value: "<b>8+ years</b> across GenAI, machine learning, and data platform engineering &mdash; spanning the full data function: data engineering, analytics, data science, and MLOps deployment"
     - name: "Interest:"
-      value: Data-driven Artificial Intelligence applications
+      value: Data-driven and agentic AI applications; data &amp; AI governance
     - name: "Proficiency:"
-      value: Large-scale data processing using <b>Hadoop</b> and <b>Spark SQL</b> and training deep neural networks with deep learning frameworks such as <b>TensorFlow</b> and <b>PyTorch</b>
+      value: Architecting governed data warehouses on <b>Databricks</b> with CDC streaming via <b>AWS DMS</b>, and shipping <b>LLM / agentic systems</b> to production (built with <b>TensorFlow</b> and <b>PyTorch</b>)
     - name: "<i class='fas fa-envelope'></i> :"
       value: <a href="mailto:garygsw@gmail.com"><code>garygsw@gmail.com</code></a>
     - name: "<i class='fab fa-linkedin-in'></i> :"
@@ -17,6 +17,19 @@
 - title: Work Experience
   type: table
   contents:
+    - title: Data Scientist
+      subtitle: "<i><a href='https://www.whitecoat.global'>WhiteCoat</a></i> &mdash; SEA digital health platform (SG/MY/PH/HK/ID)"
+      year: 2024-Present
+      start_date: May 2024
+      end_date: Present
+      location: Singapore
+      description:
+        - Work across the full data function end to end &mdash; data engineering, analytics, data science, and AI transformation &mdash; supporting management decision-making and fundraising
+        - Architected <b>Data Warehouse 2.0</b> on <a href="https://www.databricks.com"><b>Databricks</b></a>, migrating to a governed native catalog with CDC streaming via <b>AWS DMS</b> and cutting data-platform costs by ~80%
+        - Designed a company-wide AI operating model &mdash; a git-based knowledge base plus a governed <b>MCP</b> layer connecting AI agents to live company data (Databricks, Jira, GitHub, Drive, Gmail, Mixpanel) &mdash; and rolled out Claude and GPT/Codex org-wide with read-only and PII-ringfencing guardrails
+        - Built a self-healing LLM pipeline that auto-classifies Databricks job failures, self-repairs or opens PRs, and closes Jira tickets, eliminating manual triage
+        - Deployed predictive models, including quantile-regression doctor-demand forecasting, an AI Fraud/Waste/Abuse detection engine across 14 risk categories, and B2B corporate segmentation
+        - Data lead for the Series C fundraise data room; delivered self-serve natural-language analytics via <a href="https://www.databricks.com/product/ai-bi/genie"><b>Databricks Genie</b></a> and an MCP-connected agent
     - title: Data Scientist
       subtitle: "<i><a href='https://www.sea.com/home'>Sea Ltd</a> &mdash; <a href='https://www.garena.sg'>Garena</a></i>"
       year: 2021-2022
@@ -97,20 +110,24 @@
   contents:
     - name: "<i class='fab fa-github'></i><b> GitHub</b>:"
       value: "<a href='https://github.com/garygsw'><code>https://github.com/garygsw</code></a>"
+    - name: "<b>GenAI / ML</b>:"
+      value: LangChain, LangGraph, MCP, RAG, agents, Claude Code, TensorFlow, PyTorch, scikit-learn, MLflow
+    - name: "<b>Data &amp; Platform</b>:"
+      value: Databricks, Apache Spark/Hive/Hadoop, AWS DMS (CDC), Unity Catalog, ETL pipeline design
+    - name: "<b>Governance</b>:"
+      value: AI &amp; data governance, Unity Catalog access control, PII ringfencing, read-only guardrails
     - name: "<b>Programming languages</b>:"
-      value: Python, C/C++/C#, Javascript, Java, Microsoft VBA, R
+      value: Python, SQL, Bash, Javascript, C/C++/C#, R, VBA
+    - name: "<b>Cloud</b>:"
+      value: AWS (S3, EC2, Lambda, SageMaker, Bedrock, AgentCore), GCP (GCS, Vertex AI)
+    - name: "<b>Python libraries</b>:"
+      value: PyTorch, NumPy, Pandas, SciPy, Keras, scikit-learn, SpaCy, Django, ...
+    - name: "<b>Database systems</b>:"
+      value: MySQL, PostgreSQL, MSSQL, MongoDB, Databricks
+    - name: "<b>Visualization</b>:"
+      value: Grafana, Superset, Metabase, Lakeview, Power BI, Tableau, Matplotlib, D3.js
     - name: "<b>Operating systems</b>:"
       value: Mac OS, Windows, Ubuntu, Raspberry Pi OS, Linux Mint
-    - name: "<b>Python libraries</b>:"
-      value: PyTorch, NumPy, Pandas, SciPy, Keras, Theano, scikit-learn, SpaCy, Django, ...
-    - name: "<b>Frameworks</b>:"
-      value: Jupyter, Qt, AWS, Miscrosoft .NET 4.5, Cordova
-    - name: "<b>Database systems</b>:"
-      value: MySQL, PostgreSQL, SQLite, MongoDB
-    - name: "<b>Client-side technologies</b>:"
-      value: HTML5, CSS3, JQuery, D3.js, AngularJS
-    - name: "<b>Other software</b>:"
-      value: Automod, AIMMS, Adobe Photoshop and Illustrator
 
 - title: Others
   type: list
