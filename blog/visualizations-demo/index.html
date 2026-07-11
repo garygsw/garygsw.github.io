@@ -11,7 +11,7 @@
   Gary S. W. Goh
 
 
-  | 
+  | Rich content demo: charts, diagrams & notebooks
 
 </title>
 <meta name="description" content="My personal blog that I use to share and document my thoughts and important things that I have learnt.
@@ -23,8 +23,8 @@
 " />
 <meta property="og:type" content="object" />
 <meta property="og:title" content="" />
-<meta property="og:url" content="https://garygsw.github.io/404.html" />
-<meta property="og:description" content="" />
+<meta property="og:url" content="https://garygsw.github.io/blog/visualizations-demo/" />
+<meta property="og:description" content="Rich content demo: charts, diagrams & notebooks" />
 <meta property="og:image" content="" />
 
 
@@ -46,7 +46,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/blog/visualizations-demo/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -181,14 +181,100 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="container oops">
-    <img src="/assets/img/404.svg">
-    <br>
-    <h3>The page you are looking for was not found.
-        <br> It could be because the url is wrong or not available.</h3>
-    <br>
-    <strong><a class="buton" href="https://garygsw.github.io">Return to main site</a></strong>
+      
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Rich content demo: charts, diagrams &amp; notebooks</h1>
+    <p class="post-meta">June 1, 2024</p>
+  </header>
+
+  <article class="post-content">
+    <p>This post is a scratchpad that exercises each rich-content renderer. It’s safe to delete once you’ve QA’d the features.</p>
+
+<h2 id="chartjs">Chart.js</h2>
+
+<canvas id="demoChart" style="max-width:100%;"></canvas>
+<script>
+  window.addEventListener("load", function () {
+    new Chart(document.getElementById("demoChart"), {
+      type: "bar",
+      data: {
+        labels: ["Q1", "Q2", "Q3", "Q4"],
+        datasets: [{ label: "Teleconsults", data: [1200, 1850, 2400, 3100] }],
+      },
+      options: { responsive: true, plugins: { legend: { display: true } } },
+    });
+  });
+</script>
+
+<h2 id="plotly">Plotly</h2>
+
+<div id="demoPlotly" style="width:100%;height:380px;"></div>
+<script>
+  window.addEventListener("load", function () {
+    Plotly.newPlot(
+      "demoPlotly",
+      [{ x: ["Q1", "Q2", "Q3", "Q4"], y: [1200, 1850, 2400, 3100], type: "scatter", mode: "lines+markers", name: "Teleconsults" }],
+      { margin: { t: 20 } },
+      { responsive: true }
+    );
+  });
+</script>
+
+<h2 id="mermaid">Mermaid</h2>
+
+<div class="mermaid">
+graph LR
+  A[Raw sources] --&gt; B[Databricks bronze]
+  B --&gt; C[Silver]
+  C --&gt; D[Gold tables]
+  D --&gt; E[Dashboards]
 </div>
+
+<h2 id="pseudocode">Pseudocode</h2>
+
+<pre class="pseudocode">
+\begin{algorithm}
+\caption{Gradient Descent}
+\begin{algorithmic}
+\PROCEDURE{GradientDescent}{$f, \theta_0, \eta$}
+    \STATE $\theta \gets \theta_0$
+    \WHILE{not converged}
+        \STATE $\theta \gets \theta - \eta \nabla f(\theta)$
+    \ENDWHILE
+    \RETURN $\theta$
+\ENDPROCEDURE
+\end{algorithmic}
+\end{algorithm}
+</pre>
+
+<h2 id="tikz-tikzjax">TikZ (TikZJax)</h2>
+
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (3,0) node[right] {$x$};
+    \draw[thick,->] (0,0) -- (0,2.2) node[above] {$y$};
+    \draw[domain=0:2.8,smooth,variable=\x,blue,thick] plot ({\x},{0.25*\x*\x});
+  \end{tikzpicture}
+</script>
+
+<h2 id="math-mathjax">Math (MathJax)</h2>
+
+<p>Attribution via the integrated gradient: $\phi_i(x) = (x_i - x_i’) \int_0^1 \frac{\partial f(x’ + \alpha(x-x’))}{\partial x_i}\, d\alpha$.</p>
+
+<h2 id="jupyter-notebook">Jupyter notebook</h2>
+
+<iframe class="jupyter-notebook-iframe" src="/assets/jupyter/demo.html" loading="lazy" title="Demo notebook"></iframe>
+
+
+  </article>
+
+  
+
+</div>
+
     </div>
 
     <!-- Footer -->
@@ -250,13 +336,40 @@
     tikzjax: true     -> TikZJax            (<script type="text/tikz">...)
 -->
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 
 
 
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "default",
+  });
+</script>
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/pseudocode@2.4.1/build/pseudocode.min.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    if (window.pseudocode) {
+      pseudocode.renderClass("pseudocode", { lineNumber: true });
+    }
+  });
+</script>
+
+
+
+<link rel="stylesheet" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
 
 
 

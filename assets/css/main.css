@@ -19,14 +19,6 @@
   --global-distill-app-color: #828282;
   --global-cv-bg-color: #ffffff;
 }
-:root .fa-sun {
-  display: none;
-}
-:root .fa-moon {
-  padding-left: 10px;
-  padding-top: 12px;
-  display: block;
-}
 
 html[data-theme=dark] {
   --global-bg-color: rgb(66.25, 66.25, 66.25);
@@ -42,13 +34,44 @@ html[data-theme=dark] {
   --global-distill-app-color: #e8e8e8;
   --global-cv-bg-color: #2c3237;
 }
-html[data-theme=dark] .fa-sun {
+
+#light-toggle .fa-sun,
+#light-toggle .fa-moon,
+#light-toggle .fa-adjust {
+  display: none;
+  padding-left: 10px;
+  padding-top: 12px;
+}
+
+html[data-theme-setting=light] #light-toggle .fa-sun {
+  display: block;
+}
+
+html[data-theme-setting=dark] #light-toggle .fa-moon {
+  display: block;
+}
+
+html[data-theme-setting=system] #light-toggle .fa-adjust {
+  display: block;
+}
+
+html:not([data-theme-setting]) #light-toggle .fa-adjust {
+  display: block;
+}
+
+#search-toggle {
+  cursor: pointer;
+}
+#search-toggle .fa-search {
   padding-left: 10px;
   padding-top: 12px;
   display: block;
 }
-html[data-theme=dark] .fa-moon {
-  display: none;
+
+ninja-keys {
+  --ninja-accent-color: var(--global-theme-color);
+  --ninja-font-family: inherit;
+  --ninja-z-index: 2000;
 }
 
 /******************************************************************************
@@ -137,6 +160,27 @@ p:not([class]) a:hover {
 
 .badge {
   color: var(--global-cv-bg-color) !important;
+}
+
+.publications .badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.jupyter-notebook-iframe {
+  width: 100%;
+  height: 420px;
+  border: 1px solid var(--global-text-color-light);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.mermaid {
+  text-align: center;
+  margin: 1.5rem 0;
 }
 
 blockquote {

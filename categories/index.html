@@ -161,10 +161,12 @@
           
           
           
+          
             <div class="toggle-container">
-              <a id="light-toggle">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
+              <a id="light-toggle" role="button" title="Cycle light / dark / system theme">
+                  <i class="fas fa-sun" title="Switch to dark theme"></i>
+                  <i class="fas fa-moon" title="Switch to system theme"></i>
+                  <i class="fas fa-adjust" title="Switch to light theme"></i>
               </a>
             </div>
           
@@ -189,6 +191,20 @@
   <article>
     <div id="archives">
 
+  <div class="archive-group">
+    
+    <div id="#demo"></div>
+    <p></p>
+
+    <h3 class="category-head">demo</h3>
+    <a name="demo"></a>
+    
+    <article class="archive-item">
+      <h4><a href="/blog/visualizations-demo/">Rich content demo: charts, diagrams &amp; notebooks</a></h4>
+    </article>
+    
+  </div>
+
 </div>
 
   </article>
@@ -210,6 +226,9 @@
 </footer>
 
 
+
+    <!-- Site search -->
+    
 
   </body>
 
@@ -242,6 +261,26 @@
 <!-- Code copy button -->
 <script src="/assets/js/clipboard.js"></script>
 <script src="/assets/js/copy_code.js"></script>
+
+<!-- Charts / diagrams / pseudocode (opt-in per page via front matter) -->
+<!--
+  Rich-content renderers, loaded only on pages that opt in via front matter:
+    chart_js: true    -> Chart.js          (<canvas> + new Chart(...))
+    plotly: true      -> Plotly.js         (<div> + Plotly.newPlot(...))
+    mermaid: true     -> Mermaid diagrams   (<div class="mermaid">...)
+    pseudocode: true  -> pseudocode.js      (<pre class="pseudocode">...)  [needs KaTeX]
+    tikzjax: true     -> TikZJax            (<script type="text/tikz">...)
+-->
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://garygsw.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://garygsw.github.io/" rel="alternate" type="text/html" /><updated>2026-07-11T08:01:06+00:00</updated><id>https://garygsw.github.io/feed.xml</id><title type="html">blank</title><subtitle>My personal blog that I use to share and document my thoughts and important things that I have learnt.
-</subtitle><entry><title type="html">a distill-style blog post</title><link href="https://garygsw.github.io/blog/distill/" rel="alternate" type="text/html" title="a distill-style blog post" /><published>2021-05-22T00:00:00+00:00</published><updated>2021-05-22T00:00:00+00:00</updated><id>https://garygsw.github.io/blog/distill</id><content type="html" xml:base="https://garygsw.github.io/blog/distill/"><![CDATA[<p><strong>NOTE:</strong>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://garygsw.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://garygsw.github.io/" rel="alternate" type="text/html" /><updated>2026-07-11T12:11:10+00:00</updated><id>https://garygsw.github.io/feed.xml</id><title type="html">blank</title><subtitle>My personal blog that I use to share and document my thoughts and important things that I have learnt.
+</subtitle><entry><title type="html">Rich content demo: charts, diagrams &amp;amp; notebooks</title><link href="https://garygsw.github.io/blog/visualizations-demo/" rel="alternate" type="text/html" title="Rich content demo: charts, diagrams &amp;amp; notebooks" /><published>2024-06-01T01:00:00+00:00</published><updated>2024-06-01T01:00:00+00:00</updated><id>https://garygsw.github.io/blog/visualizations-demo</id><content type="html" xml:base="https://garygsw.github.io/blog/visualizations-demo/"><![CDATA[<p>This post is a scratchpad that exercises each rich-content renderer. It’s safe to delete once you’ve QA’d the features.</p>
+
+<h2 id="chartjs">Chart.js</h2>
+
+<canvas id="demoChart" style="max-width:100%;"></canvas>
+<script>
+  window.addEventListener("load", function () {
+    new Chart(document.getElementById("demoChart"), {
+      type: "bar",
+      data: {
+        labels: ["Q1", "Q2", "Q3", "Q4"],
+        datasets: [{ label: "Teleconsults", data: [1200, 1850, 2400, 3100] }],
+      },
+      options: { responsive: true, plugins: { legend: { display: true } } },
+    });
+  });
+</script>
+
+<h2 id="plotly">Plotly</h2>
+
+<div id="demoPlotly" style="width:100%;height:380px;"></div>
+<script>
+  window.addEventListener("load", function () {
+    Plotly.newPlot(
+      "demoPlotly",
+      [{ x: ["Q1", "Q2", "Q3", "Q4"], y: [1200, 1850, 2400, 3100], type: "scatter", mode: "lines+markers", name: "Teleconsults" }],
+      { margin: { t: 20 } },
+      { responsive: true }
+    );
+  });
+</script>
+
+<h2 id="mermaid">Mermaid</h2>
+
+<div class="mermaid">
+graph LR
+  A[Raw sources] --&gt; B[Databricks bronze]
+  B --&gt; C[Silver]
+  C --&gt; D[Gold tables]
+  D --&gt; E[Dashboards]
+</div>
+
+<h2 id="pseudocode">Pseudocode</h2>
+
+<pre class="pseudocode">
+\begin{algorithm}
+\caption{Gradient Descent}
+\begin{algorithmic}
+\PROCEDURE{GradientDescent}{$f, \theta_0, \eta$}
+    \STATE $\theta \gets \theta_0$
+    \WHILE{not converged}
+        \STATE $\theta \gets \theta - \eta \nabla f(\theta)$
+    \ENDWHILE
+    \RETURN $\theta$
+\ENDPROCEDURE
+\end{algorithmic}
+\end{algorithm}
+</pre>
+
+<h2 id="tikz-tikzjax">TikZ (TikZJax)</h2>
+
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (3,0) node[right] {$x$};
+    \draw[thick,->] (0,0) -- (0,2.2) node[above] {$y$};
+    \draw[domain=0:2.8,smooth,variable=\x,blue,thick] plot ({\x},{0.25*\x*\x});
+  \end{tikzpicture}
+</script>
+
+<h2 id="math-mathjax">Math (MathJax)</h2>
+
+<p>Attribution via the integrated gradient: $\phi_i(x) = (x_i - x_i’) \int_0^1 \frac{\partial f(x’ + \alpha(x-x’))}{\partial x_i}\, d\alpha$.</p>
+
+<h2 id="jupyter-notebook">Jupyter notebook</h2>
+
+<iframe class="jupyter-notebook-iframe" src="/assets/jupyter/demo.html" loading="lazy" title="Demo notebook"></iframe>]]></content><author><name></name></author><category term="demo" /><category term="dataviz" /><category term="demo" /><summary type="html"><![CDATA[A demo post exercising the Chart.js, Plotly, Mermaid, pseudocode, TikZ and Jupyter integrations. Safe to delete.]]></summary></entry><entry><title type="html">a distill-style blog post</title><link href="https://garygsw.github.io/blog/distill/" rel="alternate" type="text/html" title="a distill-style blog post" /><published>2021-05-22T00:00:00+00:00</published><updated>2021-05-22T00:00:00+00:00</updated><id>https://garygsw.github.io/blog/distill</id><content type="html" xml:base="https://garygsw.github.io/blog/distill/"><![CDATA[<p><strong>NOTE:</strong>
 Citations, footnotes, and code blocks do not display correctly in the dark mode since distill does not support the dark mode by default.
 If you are interested in correctly adding dark mode support for distill, please open <a href="https://github.com/alshedivat/al-folio/discussions">a discussion</a> and let us know.</p>
 

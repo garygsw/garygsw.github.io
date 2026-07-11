@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>demo notebook</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 16px; color: #1a1a1a; background: #fff; }
+  .cell { display: flex; margin: 10px 0; align-items: flex-start; }
+  .prompt { width: 72px; flex: 0 0 72px; color: #999; font-family: "SFMono-Regular", Menlo, monospace; font-size: 12px; padding-top: 8px; text-align: right; padding-right: 10px; }
+  .input pre, .output pre { margin: 0; padding: 8px 12px; border-radius: 4px; font-family: "SFMono-Regular", Menlo, monospace; font-size: 13px; overflow-x: auto; }
+  .input pre { background: #f7f7f7; border: 1px solid #e6e6e6; }
+  .output pre { background: transparent; }
+  .k { color: #a626a4; } .s { color: #50a14f; } .c { color: #a0a1a7; font-style: italic; } .n { color: #986801; }
+  table.df { border-collapse: collapse; font-size: 13px; }
+  table.df th, table.df td { border: 1px solid #ddd; padding: 4px 10px; text-align: right; }
+  table.df th { background: #f2f2f2; }
+</style>
+</head>
+<body>
+  <div class="cell input">
+    <div class="prompt">In [1]:</div>
+    <div class="io"><pre><span class="k">import</span> pandas <span class="k">as</span> pd
+<span class="k">import</span> numpy <span class="k">as</span> np
+
+df = pd.DataFrame({
+    <span class="s">"quarter"</span>: [<span class="s">"Q1"</span>, <span class="s">"Q2"</span>, <span class="s">"Q3"</span>, <span class="s">"Q4"</span>],
+    <span class="s">"teleconsults"</span>: [<span class="n">1200</span>, <span class="n">1850</span>, <span class="n">2400</span>, <span class="n">3100</span>],
+})
+df[<span class="s">"growth_%"</span>] = (df[<span class="s">"teleconsults"</span>].pct_change() * <span class="n">100</span>).round(<span class="n">1</span>)
+df</pre></div>
+  </div>
+
+  <div class="cell output">
+    <div class="prompt">Out[1]:</div>
+    <div class="io">
+      <table class="df">
+        <tr><th></th><th>quarter</th><th>teleconsults</th><th>growth_%</th></tr>
+        <tr><th>0</th><td>Q1</td><td>1200</td><td>NaN</td></tr>
+        <tr><th>1</th><td>Q2</td><td>1850</td><td>54.2</td></tr>
+        <tr><th>2</th><td>Q3</td><td>2400</td><td>29.7</td></tr>
+        <tr><th>3</th><td>Q4</td><td>3100</td><td>29.2</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="cell input">
+    <div class="prompt">In [2]:</div>
+    <div class="io"><pre><span class="c"># mean quarter-on-quarter growth</span>
+df[<span class="s">"growth_%"</span>].mean().round(<span class="n">1</span>)</pre></div>
+  </div>
+
+  <div class="cell output">
+    <div class="prompt">Out[2]:</div>
+    <div class="io"><pre>37.7</pre></div>
+  </div>
+</body>
+</html>
