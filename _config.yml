@@ -219,6 +219,11 @@ enable_navbar_social:
   # navbar on the about page
 enable_project_categories: true # enables categorization of projects into # multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
+enable_search: true # enables the ninja-keys command-palette site search
+# Client-side citation / attention badges on publications (render only when a DOI is present)
+enable_publication_badges:
+  altmetric: true
+  dimensions: true
 
 # -----------------------------------------------------------------------------
 # Library versions

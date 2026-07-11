@@ -61,6 +61,15 @@ p:not([class]) a {
   color: var(--global-cv-bg-color) !important;
 }
 
+// Publication citation / attention badges
+.publications .badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 blockquote {
   background: var(--global-bg-color);
   border-left: 2px solid var(--global-theme-color);
