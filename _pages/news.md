@@ -3,7 +3,7 @@ layout: page
 permalink: /news/
 title: news
 nav-title: news
-nav: true
+nav: false
 description: Announcements and life updates, newest first.
 ---
 
