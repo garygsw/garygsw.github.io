@@ -52,9 +52,9 @@ let applyTheme = () => {
   // Code Syntax Highlighting
   let syntax_link;
   if (effective === "dark") {
-    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.dark }}.css" />';
+    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme.dark }}.css" />';
   } else {
-    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/{{ site.highlight_theme.light }}.css" />';
+    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme.light }}.css" />';
   }
   if (window.jQuery) {
     $("#syntax-theme").remove();
