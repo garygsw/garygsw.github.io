@@ -68,6 +68,7 @@ contact_note: >
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
+goatcounter_analytics: garygsw # goatcounter site code (https://<code>.goatcounter.com)
 
 # -----------------------------------------------------------------------------
 # Blog
@@ -213,6 +214,7 @@ scholar:
 
 enable_google_analytics: false # enables google analytics
 enable_panelbear_analytics: false # enables panelbear analytics
+enable_goatcounter_analytics: true # enables goatcounter analytics (privacy-friendly, no cookies)
 enable_mansory: true # enables automatic project cards arangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips:
