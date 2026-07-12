@@ -117,6 +117,11 @@ news_limit: 5
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
+# Sass — the al-folio theme still uses @import; silence that deprecation until
+# the theme migrates to @use (https://sass-lang.com/d/import)
+sass:
+  silence_deprecations: [import]
+
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
