@@ -12,8 +12,8 @@
   --global-text-color-light: #828282;
   --global-theme-color: #0076df;
   --global-hover-color: #0076df;
-  --global-ext-link-color: rgb(70, 167.8923766816, 255);
-  --global-footer-bg-color: rgb(66.25, 66.25, 66.25);
+  --global-ext-link-color: #46a8ff;
+  --global-footer-bg-color: #424242;
   --global-footer-text-color: #e8e8e8;
   --global-footer-link-color: #ffffff;
   --global-distill-app-color: #828282;
@@ -21,15 +21,15 @@
 }
 
 html[data-theme=dark] {
-  --global-bg-color: rgb(66.25, 66.25, 66.25);
+  --global-bg-color: #424242;
   --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
   --global-text-color-light: #828282;
-  --global-ext-link-color: rgb(255, 230.2510460251, 86);
+  --global-ext-link-color: #ffe656;
   --global-theme-color: #efcc00;
   --global-hover-color: #efcc00;
   --global-footer-bg-color: #e8e8e8;
-  --global-footer-text-color: rgb(66.25, 66.25, 66.25);
+  --global-footer-text-color: #424242;
   --global-footer-link-color: #000000;
   --global-distill-app-color: #e8e8e8;
   --global-cv-bg-color: #2c3237;
@@ -370,7 +370,7 @@ footer.fixed-bottom a {
   color: var(--global-footer-link-color);
 }
 footer.fixed-bottom a:hover {
-  color: rgb(70, 167.8923766816, 255);
+  color: #46a8ff;
   text-decoration: none;
 }
 

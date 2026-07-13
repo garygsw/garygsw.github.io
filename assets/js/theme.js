@@ -48,9 +48,9 @@ let applyTheme = () => {
   // Code Syntax Highlighting
   let syntax_link;
   if (effective === "dark") {
-    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/monokai.css" />';
+    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/monokai.css" />';
   } else {
-    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/autumn.css" />';
+    syntax_link = '<link id="syntax-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/autumn.css" />';
   }
   if (window.jQuery) {
     $("#syntax-theme").remove();
