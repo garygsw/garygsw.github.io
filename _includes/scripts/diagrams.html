@@ -16,10 +16,32 @@
 
 {% if page.mermaid %}
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+  /* Diagrams render at natural size, centered; wider-than-column ones scale down to fit */
+  .mermaid { text-align: center; }
+  .mermaid svg { display: inline-block; max-width: 100%; height: auto; }
+</style>
 <script>
   mermaid.initialize({
-    startOnLoad: true,
+    startOnLoad: false,
     theme: document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "default",
+    flowchart: { useMaxWidth: false },
+    sequence: { useMaxWidth: false },
+    state: { useMaxWidth: false },
+  });
+  window.addEventListener("load", async function () {
+    await mermaid.run();
+    // Mermaid sometimes reserves a canvas larger than the drawing; snap each
+    // svg to its content's bounding box so width:100% scales the drawing itself.
+    document.querySelectorAll(".mermaid svg").forEach(function (svg) {
+      var b = svg.getBBox();
+      if (!(b.width > 0)) return;
+      var pad = 8;
+      svg.setAttribute("viewBox", (b.x - pad) + " " + (b.y - pad) + " " + (b.width + 2 * pad) + " " + (b.height + 2 * pad));
+      svg.setAttribute("width", b.width + 2 * pad);
+      svg.setAttribute("height", b.height + 2 * pad);
+      svg.style.maxWidth = "100%";
+    });
   });
 </script>
 {% endif %}
